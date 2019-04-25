@@ -14,6 +14,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
+
+        Crashlytics.log("Start logging!");
+
+        Crashlytics.setUserIdentifier("fcfas-1");
+        Crashlytics.setUserName("Fcfas");
+        Crashlytics.setUserEmail("fcfas.firebaase@gmail.com");
+
+        Crashlytics.setString("key1", "value1");
+        Crashlytics.setBool("key2", true);
+        Crashlytics.setDouble("key3", 99.99);
+        Crashlytics.setFloat("key4", 999.99f);
+        Crashlytics.setInt("key5", 999);
+        Crashlytics.setLong("key6", System.currentTimeMillis());
     }
 
     @Override
