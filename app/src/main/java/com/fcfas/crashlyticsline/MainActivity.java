@@ -27,6 +27,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Crashlytics.setFloat("key4", 999.99f);
         Crashlytics.setInt("key5", 999);
         Crashlytics.setLong("key6", System.currentTimeMillis());
+
+        bindView();
+    }
+
+    private void bindView() {
+        findViewById(R.id.btn_force).setOnClickListener(this);
+        findViewById(R.id.btn_exception).setOnClickListener(this);
     }
 
     @Override
